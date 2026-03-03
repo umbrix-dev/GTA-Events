@@ -19,6 +19,7 @@ public class Example : Script
         // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
         // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
+        Events.PlayerWeaponChanged.Connect += OnPlayerWeaponChanged;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.PlayerDied.Connect += OnPlayerDied;
@@ -49,6 +50,11 @@ public class Example : Script
     private void OnPlayerWantedLevelChanged(int wantedLevel)
     {
         Notify($"The players wanted level has changed to: {wantedLevel}");
+    }
+
+    private void OnPlayerWeaponChanged(WeaponHash weaponHash)
+    {
+        Notify($"The players current weapon has changed to: {weaponHash.ToString()}");
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)

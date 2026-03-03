@@ -76,6 +76,7 @@
     <Compile Include="Events\PlayerLeftVehicleEvent.cs" />
     <Compile Include="Events\PlayerRevivedEvent.cs" />
     <Compile Include="Events\PlayerWantedLevelChangedEvent.cs" />
+    <Compile Include="Events\PlayerWeaponChangedEvent.cs" />
     <Compile Include="Example.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

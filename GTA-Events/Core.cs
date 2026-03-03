@@ -10,6 +10,7 @@ namespace GTA.Events
         public static NearbyPedFleeingEvent NearbyPedFleeing { get; } = new NearbyPedFleeingEvent();
         public static NearbyPedKilledEvent NearbyPedKilled { get; } = new NearbyPedKilledEvent();
         public static PlayerWantedLevelChangedEvent PlayerWantedLevelChanged { get; } = new PlayerWantedLevelChangedEvent();
+        public static PlayerWeaponChangedEvent PlayerWeaponChanged { get; } = new PlayerWeaponChangedEvent();
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerDiedEvent PlayerDied { get; } = new PlayerDiedEvent();
@@ -22,6 +23,7 @@ namespace GTA.Events
             NearbyPedFleeing,
             NearbyPedKilled,
             PlayerWantedLevelChanged,
+            PlayerWeaponChanged,
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
             PlayerDied,
