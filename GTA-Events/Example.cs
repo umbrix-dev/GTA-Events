@@ -14,11 +14,17 @@ public class Example : Script
     
     private void SetupEvents()
     {
+        Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
+        // Events.PlayerDied.Connect += OnPlayerDied;
         // Events.NearbyExplosion.Connect += OnNearbyExplosion;
-        Core.PlayerDied.Connect += OnPlayerDied;
+    }
+
+    private void OnNearbyPedEnteredVehicle(Ped ped, Vehicle vehicle)
+    {
+        Notify("A nearby ped has entered a vehicle.");
     }
 
     private void OnNearbyPedKilled(Ped ped, Entity entity)
@@ -36,14 +42,14 @@ public class Example : Script
         Notify("Player just left a vehicle.");
     }
 
-    private void OnNearbyExplosion()
-    {
-        Notify("An explosion has occured nearby.");
-    }
-
     private void OnPlayerDied(Entity entity)
     {
         Notify("Player has died.");
+    }
+
+    private void OnNearbyExplosion()
+    {
+        Notify("An explosion has occured nearby.");
     }
 
     private void Notify(string message, bool important = true)
@@ -53,6 +59,6 @@ public class Example : Script
 
     private void OnTick(object sender, EventArgs e)
     {
-        Core.OnTick();
+        Events.OnTick();
     }
 }

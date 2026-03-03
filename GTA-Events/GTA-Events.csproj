@@ -67,6 +67,7 @@
     <Compile Include="Bases\NearbyPedEventBase.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Events\NearbyExplosionEvent.cs" />
+    <Compile Include="Events\NearbyPedEnteredVehicleEvent.cs" />
     <Compile Include="Events\PlayerDiedEvent.cs" />
     <Compile Include="Events\PlayerEnteredVehicleEvent.cs" />
     <Compile Include="Events\NearbyPedKilledEvent.cs" />
