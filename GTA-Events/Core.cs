@@ -9,9 +9,11 @@ namespace GTA.Events
         public static NearbyPedLeftVehicleEvent NearbyPedLeftVehicle { get; } = new NearbyPedLeftVehicleEvent();
         public static NearbyPedFleeingEvent NearbyPedFleeing { get; } = new NearbyPedFleeingEvent();
         public static NearbyPedKilledEvent NearbyPedKilled { get; } = new NearbyPedKilledEvent();
+        public static PlayerWantedLevelChangedEvent PlayerWantedLevelChanged { get; } = new PlayerWantedLevelChangedEvent();
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerDiedEvent PlayerDied { get; } = new PlayerDiedEvent();
+        public static PlayerRevivedEvent PlayerRevived { get; } = new PlayerRevivedEvent();
         public static NearbyExplosionEvent NearbyExplosion { get; } = new NearbyExplosionEvent();
 
         private static readonly List<EventBase> events = new List<EventBase> {
@@ -19,9 +21,11 @@ namespace GTA.Events
             NearbyPedLeftVehicle,
             NearbyPedFleeing,
             NearbyPedKilled,
+            PlayerWantedLevelChanged,
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
             PlayerDied,
+            PlayerRevived,
             NearbyExplosion
         };
 

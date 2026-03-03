@@ -18,9 +18,11 @@ public class Example : Script
         // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
         // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
+        // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.PlayerDied.Connect += OnPlayerDied;
+        // Events.PlayerRevived.Connect += OnPlayerRevived;
         // Events.NearbyExplosion.Connect += OnNearbyExplosion;
     }
 
@@ -44,6 +46,11 @@ public class Example : Script
         Notify("A nearby ped has been killed.");
     }
 
+    private void OnPlayerWantedLevelChanged(int wantedLevel)
+    {
+        Notify($"The players wanted level has changed to: {wantedLevel}");
+    }
+
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
     {
         Notify("Player just entered a vehicle");
@@ -57,6 +64,11 @@ public class Example : Script
     private void OnPlayerDied(Entity entity)
     {
         Notify("Player has died.");
+    }
+
+    private void OnPlayerRevived()
+    {
+        Notify("Player has been revived.");
     }
 
     private void OnNearbyExplosion()
