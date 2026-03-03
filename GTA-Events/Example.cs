@@ -14,7 +14,8 @@ public class Example : Script
     
     private void SetupEvents()
     {
-        Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
+        // Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
+        // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
@@ -25,6 +26,11 @@ public class Example : Script
     private void OnNearbyPedEnteredVehicle(Ped ped, Vehicle vehicle)
     {
         Notify("A nearby ped has entered a vehicle.");
+    }
+
+    private void OnNearbyPedLeftVehicle(Ped ped, Vehicle vehicle)
+    {
+        Notify("A nearby ped has left their vehicle.");
     }
 
     private void OnNearbyPedKilled(Ped ped, Entity entity)

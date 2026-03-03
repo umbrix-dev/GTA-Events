@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GTA.Events
 {
-    public class NearbyPedEnteredVehicleEvent : NearbyPedEventBase
+    public class NearbyPedLeftVehicleEvent : NearbyPedEventBase
     {
         public event Action<Ped, Vehicle> Connect;
 
@@ -51,7 +51,7 @@ namespace GTA.Events
                 Vehicle currentVehicle = ped.CurrentVehicle;
                 pedLastVehicle.TryGetValue(ped.Handle, out Vehicle lastVehicle);
                 
-                if (lastVehicle == null && currentVehicle != null)
+                if (lastVehicle != null && currentVehicle == null)
                 {
                     Invoke(ped, currentVehicle);
                 }

@@ -8,5 +8,6 @@ public abstract class EventBase
     // have different parameters which means fighting
     // against the type system constantly
 
+    internal abstract bool HasSubscribers { get; }
     internal abstract void OnTick();
 }

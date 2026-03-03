@@ -44,5 +44,7 @@ namespace GTA.Events
                 Invoke();
             }
         }
+
+        internal override bool HasSubscribers => Connect != null;
     }
 }

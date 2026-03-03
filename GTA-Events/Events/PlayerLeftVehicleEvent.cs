@@ -25,5 +25,7 @@ namespace GTA.Events
 
             lastVehicle = currentVehicle;
         }
+
+        internal override bool HasSubscribers => Connect != null;
     }
 }

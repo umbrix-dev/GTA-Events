@@ -25,5 +25,7 @@ namespace GTA.Events
                 alreadyDead = false;
             }
         }
+
+        internal override bool HasSubscribers => Connect != null;
     }
 }
