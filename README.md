@@ -1,9 +1,15 @@
 # GTA-Events
 A comprehensive event system for SHVDN3 - subscribe to GTA 5 events with a clean API.
 
+&nbsp;
 > [!WARNING]
 > Requires [ScriptHookVDotNet3](https://github.com/scripthookvdotnet/scripthookvdotnet). SHVDN2 is not supported.
 
+&nbsp;
+> [!NOTE]
+> This project is in early development. More events are being added actively — contributions and suggestions are welcome.
+
+&nbsp;
 ## Usage
 ```csharp
 using GTA.Events;
