@@ -65,7 +65,10 @@
   <ItemGroup>
     <Compile Include="Bases\EventBase.cs" />
     <Compile Include="Bases\NearbyPedEventBase.cs" />
-    <Compile Include="Core.cs" />
+    <Compile Include="Examples\PedEventExamples.cs" />
+    <Compile Include="Examples\PlayerEventExamples.cs" />
+    <Compile Include="Examples\WorldEventExamples.cs" />
+    <Compile Include="GTA-Events.cs" />
     <Compile Include="Events\NearbyExplosionEvent.cs" />
     <Compile Include="Events\NearbyPedFleeingEvent.cs" />
     <Compile Include="Events\NearbyPedLeftVehicleEvent.cs" />
@@ -78,7 +81,6 @@
     <Compile Include="Events\PlayerRevivedEvent.cs" />
     <Compile Include="Events\PlayerWantedLevelChangedEvent.cs" />
     <Compile Include="Events\PlayerWeaponChangedEvent.cs" />
-    <Compile Include="Example.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
