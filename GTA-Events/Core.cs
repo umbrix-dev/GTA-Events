@@ -15,6 +15,7 @@ namespace GTA.Events
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerDiedEvent PlayerDied { get; } = new PlayerDiedEvent();
         public static PlayerRevivedEvent PlayerRevived { get; } = new PlayerRevivedEvent();
+        public static NearbyVehicleDestroyedEvent NearbyVehicleDestroyed { get; } = new NearbyVehicleDestroyedEvent();
         public static NearbyExplosionEvent NearbyExplosion { get; } = new NearbyExplosionEvent();
 
         private static readonly List<EventBase> events = new List<EventBase> {
@@ -28,6 +29,7 @@ namespace GTA.Events
             PlayerLeftVehicle,
             PlayerDied,
             PlayerRevived,
+            NearbyVehicleDestroyed,
             NearbyExplosion
         };
 

@@ -70,6 +70,7 @@
     <Compile Include="Events\NearbyPedFleeingEvent.cs" />
     <Compile Include="Events\NearbyPedLeftVehicleEvent.cs" />
     <Compile Include="Events\NearbyPedEnteredVehicleEvent.cs" />
+    <Compile Include="Events\NearbyVehicleDestroyedEvent.cs" />
     <Compile Include="Events\PlayerDiedEvent.cs" />
     <Compile Include="Events\PlayerEnteredVehicleEvent.cs" />
     <Compile Include="Events\NearbyPedKilledEvent.cs" />
