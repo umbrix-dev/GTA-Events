@@ -1,1 +1,35 @@
 # GTA-Events
+A comprehensive event system for SHVDN3 - subscribe to GTA 5 events with a clean API.
+
+> [!WARNING]
+> Requires [ScriptHookVDotNet3](https://github.com/scripthookvdotnet/scripthookvdotnet). SHVDN2 is not supported.
+
+## Usage
+```csharp
+using GTA.Events;
+
+Events.NearbyPedKilled.Connect += (ped, killer) => { };
+Events.PlayerEnteredVehicle.Connect += (vehicle) => { };
+Events.PlayerLeftVehicle.Connect += (vehicle) => { };
+Events.NearbyExplosion.Connect += () => { };
+Events.PlayerDied.Connect += (killer) => { };
+```
+
+## Configuration
+```csharp
+Events.NearbyPedKilled.Radius = 50f;
+Events.NearbyExplosion.Type = ExplosionType.Grenade;
+Events.NearbyExplosion.Position = new Vector3(100f, 200f, 30f);
+```
+
+## Events
+| Event | Arguments |
+|---|---|
+| `NearbyPedKilled` | `Ped, Entity killer` |
+| `PlayerEnteredVehicle` | `Vehicle` |
+| `PlayerLeftVehicle` | `Vehicle` |
+| `NearbyExplosion` | — |
+| `PlayerDied` | `Entity killer` |
+
+## License
+MIT
