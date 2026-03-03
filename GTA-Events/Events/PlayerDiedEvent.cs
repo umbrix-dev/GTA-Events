@@ -2,7 +2,7 @@
 
 namespace GTA.Events
 {
-    public class PlayerDiedEvent
+    public class PlayerDiedEvent : EventBase
     {
         public event Action<Entity> Connect;
 
@@ -13,7 +13,7 @@ namespace GTA.Events
 
         private bool alreadyDead = false;
 
-        internal void OnTick()
+        internal override void OnTick()
         {
             if (Game.Player.Character.IsDead && !alreadyDead)
             {

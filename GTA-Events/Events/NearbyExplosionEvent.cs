@@ -4,7 +4,7 @@ using System;
 
 namespace GTA.Events
 {
-    public class NearbyExplosionEvent
+    public class NearbyExplosionEvent : EventBase
     {
         /// <summary>
         /// The explosion type to filter for. When set to null it won't apply any filter.
@@ -29,7 +29,7 @@ namespace GTA.Events
             Connect?.Invoke();
         }
 
-        internal void OnTick()
+        internal override void OnTick()
         {
             var type = Type.HasValue ? (int)Type.Value : -1;
             Vector3 position = Position ?? Game.Player.Character.Position;

@@ -2,7 +2,7 @@
 
 namespace GTA.Events
 {
-    public class PlayerEnteredVehicleEvent
+    public class PlayerEnteredVehicleEvent : EventBase
     {
         public event Action<Vehicle> Connect;
 
@@ -13,7 +13,7 @@ namespace GTA.Events
 
         private Vehicle lastVehicle = null;
 
-        internal void OnTick()
+        internal override void OnTick()
         {
             Vehicle currentVehicle = Game.Player.Character.CurrentVehicle;
 
