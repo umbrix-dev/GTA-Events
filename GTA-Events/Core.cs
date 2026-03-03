@@ -1,6 +1,5 @@
-﻿
-using System.CodeDom;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
 
 namespace GTA.Events
 {
@@ -8,6 +7,7 @@ namespace GTA.Events
     {
         public static NearbyPedEnteredVehicleEvent NearbyPedEnteredVehicle { get; } = new NearbyPedEnteredVehicleEvent();
         public static NearbyPedLeftVehicleEvent NearbyPedLeftVehicle { get; } = new NearbyPedLeftVehicleEvent();
+        public static NearbyPedFleeingEvent NearbyPedFleeing { get; } = new NearbyPedFleeingEvent();
         public static NearbyPedKilledEvent NearbyPedKilled { get; } = new NearbyPedKilledEvent();
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
@@ -17,6 +17,7 @@ namespace GTA.Events
         private static readonly List<EventBase> events = new List<EventBase> {
             NearbyPedEnteredVehicle,
             NearbyPedLeftVehicle,
+            NearbyPedFleeing,
             NearbyPedKilled,
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
