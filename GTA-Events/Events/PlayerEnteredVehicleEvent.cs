@@ -1,0 +1,28 @@
+﻿using System;
+
+namespace GTA.Events
+{
+    public class PlayerEnteredVehicleEvent
+    {
+        public event Action<Vehicle> Connect;
+
+        internal void Invoke(Vehicle vehicle)
+        {
+            Connect?.Invoke(vehicle);
+        }
+
+        private Vehicle lastVehicle = null;
+
+        internal void OnTick()
+        {
+            Vehicle currentVehicle = Game.Player.Character.CurrentVehicle;
+
+            if (lastVehicle == null && currentVehicle != null)
+            {
+                Invoke(currentVehicle);
+            }
+
+            lastVehicle = currentVehicle;
+        }
+    }
+}

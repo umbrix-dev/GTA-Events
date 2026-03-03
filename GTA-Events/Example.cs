@@ -18,7 +18,7 @@ public class Example : Script
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.NearbyExplosion.Connect += OnNearbyExplosion;
-        Events.PlayerDied.Connect += OnPlayerDied;
+        Core.PlayerDied.Connect += OnPlayerDied;
     }
 
     private void OnNearbyPedKilled(Ped ped, Entity entity)
@@ -53,6 +53,6 @@ public class Example : Script
 
     private void OnTick(object sender, EventArgs e)
     {
-        Events.OnTick();
+        Core.OnTick();
     }
 }
