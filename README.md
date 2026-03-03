@@ -30,5 +30,8 @@ Events.NearbyExplosion.Position = new Vector3(100f, 200f, 30f);
 
 | `PlayerDied` | `Entity killer` |
 
+## Events
+See all latest available events at: [DOCS.MD](https://github.com/umbrix-dev/GTA-Events/edit/master/DOCS.md)
+
 ## License
 MIT
