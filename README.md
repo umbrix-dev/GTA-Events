@@ -28,7 +28,6 @@ Events.NearbyExplosion.Type = ExplosionType.Grenade;
 Events.NearbyExplosion.Position = new Vector3(100f, 200f, 30f);
 ```
 
-| `NearbyExplosion` | — |
 | `PlayerDied` | `Entity killer` |
 
 ## License
