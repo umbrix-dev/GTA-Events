@@ -28,12 +28,6 @@ Events.NearbyExplosion.Type = ExplosionType.Grenade;
 Events.NearbyExplosion.Position = new Vector3(100f, 200f, 30f);
 ```
 
-## Events
-| Event | Arguments |
-|---|---|
-| `NearbyPedKilled` | `Ped, Entity killer` |
-| `PlayerEnteredVehicle` | `Vehicle` |
-| `PlayerLeftVehicle` | `Vehicle` |
 | `NearbyExplosion` | — |
 | `PlayerDied` | `Entity killer` |
 
