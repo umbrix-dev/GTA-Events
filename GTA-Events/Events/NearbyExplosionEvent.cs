@@ -9,18 +9,18 @@ namespace GTA.Events
         /// <summary>
         /// The explosion type to filter for. When set to null it won't apply any filter.
         /// </summary>
-        public ExplosionType? Type = null;
+        public ExplosionType? Type { get; set; } = null;
 
         /// <summary>
         /// The position of the area where the radius should be applied. 
         /// Will use players position if set to null.
         /// </summary>
-        public Vector3? Position = null;
+        public Vector3? Position { get; set; } = null;
 
         /// <summary>
         /// The radius of the area where the explosion will be detected.
         /// </summary>
-        public float Radius = 100f;
+        public float Radius { get; set; } = 100f;
 
         public event Action Connect;
 
