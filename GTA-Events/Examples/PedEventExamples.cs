@@ -13,7 +13,7 @@ public class PedEvents : Script
         // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
         // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
         // Events.NearbyPedStartedCombat.Connect += OnNearbyPedStartedCombat;
-        Events.NearbyPedStoppedCombat.Connect += OnNearbyPedStoppedCombat;
+        // Events.NearbyPedStoppedCombat.Connect += OnNearbyPedStoppedCombat;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
     }
 
