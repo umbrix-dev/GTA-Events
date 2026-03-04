@@ -76,6 +76,7 @@
     <Compile Include="Events\Player\PlayerStartedAimingEvent.cs" />
     <Compile Include="Events\Player\PlayerTookDamageEvent.cs" />
     <Compile Include="Events\Player\PlayerVehicleDamagedEvent.cs" />
+    <Compile Include="Events\Player\PlayerVehicleSpeedChangedEvent.cs" />
     <Compile Include="Examples\PedEventExamples.cs" />
     <Compile Include="Examples\PlayerEventExamples.cs" />
     <Compile Include="Examples\WorldEventExamples.cs" />

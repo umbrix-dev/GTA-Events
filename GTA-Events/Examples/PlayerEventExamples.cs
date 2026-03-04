@@ -11,6 +11,7 @@ public class PlayerEvents : Script
 
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
+        // Events.PlayerVehicleSpeedChanged.Connect += OnPlayerVehicleSpeedChanged;
         // Events.PlayerVehicleDamaged.Connect += OnPlayerVehicleDamaged;
         // Events.PlayerTookDamage.Connect += OnPlayerTookDamage;
         // Events.PlayerDied.Connect += OnPlayerDied;
@@ -32,6 +33,10 @@ public class PlayerEvents : Script
         Notification.PostTicker("Player just left a vehicle.", true);
     }
 
+    private void OnPlayerVehicleSpeedChanged(float speed)
+    {
+        Notification.PostTicker($"Player's vehicle speed has changed: {speed}", true);
+    }
     private void OnPlayerVehicleDamaged(Vehicle vehicle)
     {
         Notification.PostTicker("Player's vehicle just got damaged.", true);
