@@ -18,6 +18,7 @@ public class PlayerEvents : Script
         // Events.PlayerRevived.Connect += OnPlayerRevived;
         // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
         // Events.PlayerWeaponChanged.Connect += OnPlayerWeaponChanged;
+        // Events.PlayerWeaponFired.Connect += OnPlayerWeaponFired;
         // Events.PlayerStartedAiming.Connect += OnPlayerStartedAiming;
         // Events.PlayerStoppedAiming.Connect += OnPlayerStoppedAiming;
         // Events.PlayerAimingAt.Connect += OnPlayerAimingAt;
@@ -65,6 +66,11 @@ public class PlayerEvents : Script
     private void OnPlayerWeaponChanged(Weapon weapon, WeaponHash weaponHash)
     {
         Notification.PostTicker($"Weapon changed to: {weaponHash}", true);
+    }
+
+    private void OnPlayerWeaponFired(Weapon weapon, WeaponHash weaponHash)
+    {
+        Notification.PostTicker($"Weapon fired: {weaponHash}", true);
     }
 
     private void OnPlayerStartedAiming()
