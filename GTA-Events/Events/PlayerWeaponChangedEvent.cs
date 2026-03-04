@@ -1,15 +1,14 @@
-﻿
-using System;
+﻿using System;
 
 namespace GTA.Events
 {
     public class PlayerWeaponChangedEvent : EventBase
     {
-        public event Action<WeaponHash> Connect;
+        public event Action<Weapon, WeaponHash> Connect;
 
-        internal void Invoke(WeaponHash weaponHash)
+        internal void Invoke(Weapon weapon, WeaponHash weaponHash)
         {
-            Connect?.Invoke(weaponHash);
+            Connect?.Invoke(weapon, weaponHash);
         }
 
         private Weapon lastWeapon = Game.Player.Character.Weapons.Current;
@@ -19,7 +18,7 @@ namespace GTA.Events
             Weapon currentWeapon = Game.Player.Character.Weapons.Current;
             if (currentWeapon != lastWeapon)
             {
-                Invoke(currentWeapon.Hash);
+                Invoke(currentWeapon, currentWeapon.Hash);
             }
 
             lastWeapon = currentWeapon;

@@ -9,12 +9,12 @@ public class PlayerEvents : Script
     {
         Tick += OnTick;
 
-        Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
-        Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
-        Events.PlayerDied.Connect += OnPlayerDied;
-        Events.PlayerRevived.Connect += OnPlayerRevived;
-        Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
-        Events.PlayerWeaponChanged.Connect += OnPlayerWeaponChanged;
+        // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
+        // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
+        // Events.PlayerDied.Connect += OnPlayerDied;
+        // Events.PlayerRevived.Connect += OnPlayerRevived;
+        // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
+        // Events.PlayerWeaponChanged.Connect += OnPlayerWeaponChanged;
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
@@ -42,7 +42,7 @@ public class PlayerEvents : Script
         Notification.PostTicker($"Wanted level changed to: {wantedLevel}", true);
     }
 
-    private void OnPlayerWeaponChanged(WeaponHash weaponHash)
+    private void OnPlayerWeaponChanged(Weapon weapon, WeaponHash weaponHash)
     {
         Notification.PostTicker($"Weapon changed to: {weaponHash}", true);
     }

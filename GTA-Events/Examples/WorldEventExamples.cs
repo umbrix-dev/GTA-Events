@@ -9,8 +9,8 @@ public class WorldEvents : Script
     {
         Tick += OnTick;
 
-        Events.NearbyVehicleDestroyed.Connect += OnNearbyVehicleDestroyed;
-        Events.NearbyExplosion.Connect += OnNearbyExplosion;
+        // Events.NearbyVehicleDestroyed.Connect += OnNearbyVehicleDestroyed;
+        // Events.NearbyExplosion.Connect += OnNearbyExplosion;
     }
 
     private void OnNearbyVehicleDestroyed(Vehicle vehicle)

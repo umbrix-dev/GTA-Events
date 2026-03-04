@@ -9,10 +9,10 @@ public class PedEvents : Script
     {
         Tick += OnTick;
 
-        Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
-        Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
-        Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
-        Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
+        // Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
+        // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
+        // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
+        // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
     }
 
     private void OnNearbyPedEnteredVehicle(Ped ped, Vehicle vehicle)
