@@ -9,6 +9,7 @@ public class PlayerEvents : Script
     {
         Tick += OnTick;
 
+        // Events.PlayerRagdolled.Connect += OnPlayerRagdolled;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.PlayerVehicleSpeedChanged.Connect += OnPlayerVehicleSpeedChanged;
@@ -25,6 +26,11 @@ public class PlayerEvents : Script
         // Events.PlayerMeleeHit.Connect += OnPlayerMeleeHit;
         // Events.PlayerEnteredWater.Connect += OnPlayerEnteredWater;
         // Events.PlayerLeftWater.Connect += OnPlayerLeftWater;
+    }
+
+    private void OnPlayerRagdolled()
+    {
+        Notification.PostTicker("Player just ragdolled.", true);
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)

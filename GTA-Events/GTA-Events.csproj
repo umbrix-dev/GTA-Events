@@ -75,6 +75,7 @@
     <Compile Include="Events\Player\PlayerLeftWaterEvent.cs" />
     <Compile Include="Events\Player\PlayerEnteredWaterEvent.cs" />
     <Compile Include="Events\Player\PlayerMeleeHitEvent.cs" />
+    <Compile Include="Events\Player\PlayerRagdolledEvent.cs" />
     <Compile Include="Events\Player\PlayerStoppedAimingEvent.cs" />
     <Compile Include="Events\Player\PlayerStartedAimingEvent.cs" />
     <Compile Include="Events\Player\PlayerTookDamageEvent.cs" />
