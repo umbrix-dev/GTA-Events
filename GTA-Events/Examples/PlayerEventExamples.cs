@@ -17,6 +17,9 @@ public class PlayerEvents : Script
         // Events.PlayerRevived.Connect += OnPlayerRevived;
         // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
         // Events.PlayerWeaponChanged.Connect += OnPlayerWeaponChanged;
+        // Events.PlayerStartedAiming.Connect += OnPlayerStartedAiming;
+        // Events.PlayerStoppedAiming.Connect += OnPlayerStoppedAiming;
+        // Events.PlayerAimingAt.Connect += OnPlayerAimingAt;
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
@@ -57,6 +60,21 @@ public class PlayerEvents : Script
     private void OnPlayerWeaponChanged(Weapon weapon, WeaponHash weaponHash)
     {
         Notification.PostTicker($"Weapon changed to: {weaponHash}", true);
+    }
+
+    private void OnPlayerStartedAiming()
+    {
+        Notification.PostTicker("Player started aiming.", true);
+    }
+
+    private void OnPlayerStoppedAiming()
+    {
+        Notification.PostTicker("Player stopped aiming.", true);
+    }
+
+    private void OnPlayerAimingAt(Entity entity)
+    {
+        Notification.PostTicker("Player is aiming at an entity.", true);
     }
 
     private void OnTick(object sender, EventArgs e)
