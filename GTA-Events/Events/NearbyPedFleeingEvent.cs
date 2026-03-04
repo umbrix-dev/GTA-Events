@@ -11,14 +11,11 @@ namespace GTA.Events
             Connect?.Invoke(ped);
         }
 
-        internal override void OnTick()
+        internal override void OnPed(Ped ped)
         {
-            foreach (Ped ped in GetNearbyPeds())
+            if (ped.IsFleeing)
             {
-                if (ped.IsFleeing)
-                {
-                    Invoke(ped);
-                }
+                Invoke(ped);
             }
         }
 

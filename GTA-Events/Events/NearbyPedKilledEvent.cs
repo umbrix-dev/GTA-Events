@@ -14,15 +14,12 @@ namespace GTA.Events
 
         private readonly HashSet<int> deadPedHandles = new HashSet<int>();
 
-        internal override void OnTick()
+        internal override void OnPed(Ped ped)
         {
-            foreach (Ped ped in GetNearbyPeds())
+            if (ped.IsDead && !deadPedHandles.Contains(ped.Handle))
             {
-                if (ped.IsDead && !deadPedHandles.Contains(ped.Handle))
-                {
-                    Invoke(ped, ped.Killer);
-                    deadPedHandles.Add(ped.Handle);
-                }
+                Invoke(ped, ped.Killer);
+                deadPedHandles.Add(ped.Handle);
             }
         }
 

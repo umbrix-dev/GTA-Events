@@ -35,6 +35,8 @@ namespace GTA.Events
 
         public static void OnTick()
         {
+            NearbyPedContext.OnTick();
+
             foreach (EventBase e in events)
             {
                 if (e.HasSubscribers)

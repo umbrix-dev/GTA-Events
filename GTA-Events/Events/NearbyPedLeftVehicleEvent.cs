@@ -15,48 +15,39 @@ namespace GTA.Events
         private readonly Dictionary<int, Vehicle> pedLastVehicle = new Dictionary<int, Vehicle>();
         private float cleanupTimer = 0.0f;
 
+        internal override void OnPed(Ped ped)
+        {
+            Vehicle currentVehicle = ped.CurrentVehicle;
+            pedLastVehicle.TryGetValue(ped.Handle, out Vehicle lastVehicle);
+
+            if (lastVehicle != null && currentVehicle == null)
+            {
+                Invoke(ped, lastVehicle);
+            }
+
+            pedLastVehicle[ped.Handle] = currentVehicle;
+        }
+
         internal override void OnTick()
         {
-            Ped[] nearbyPeds = GetNearbyPeds();
-
             cleanupTimer += Game.LastFrameTime;
             if (cleanupTimer > 30.0f)
             {
                 cleanupTimer = 0.0f;
+                Ped[] nearbyPeds = World.GetNearbyPeds(
+                    Position ?? Game.Player.Character.Position, Radius
+                );
 
-                HashSet<int> nearbyPedHandles = new HashSet<int>();
+                HashSet<int> nearbyHandles = new HashSet<int>();
                 foreach (Ped ped in nearbyPeds)
-                {
-                    nearbyPedHandles.Add(ped.Handle);
-                }
+                    nearbyHandles.Add(ped.Handle);
 
-                List<int> pedHandlesNotNearby = new List<int>();
-                
+                List<int> toRemove = new List<int>();
                 foreach (int handle in pedLastVehicle.Keys)
-                {
-                    if (!nearbyPedHandles.Contains(handle))
-                    {
-                        pedHandlesNotNearby.Add(handle);
-                    }
-                }
-                
-                foreach (int handle in pedHandlesNotNearby)
-                {
+                    if (!nearbyHandles.Contains(handle)) toRemove.Add(handle);
+
+                foreach (int handle in toRemove)
                     pedLastVehicle.Remove(handle);
-                }
-            }
-
-            foreach (Ped ped in nearbyPeds)
-            {
-                Vehicle currentVehicle = ped.CurrentVehicle;
-                pedLastVehicle.TryGetValue(ped.Handle, out Vehicle lastVehicle);
-                
-                if (lastVehicle != null && currentVehicle == null)
-                {
-                    Invoke(ped, currentVehicle);
-                }
-
-                pedLastVehicle[ped.Handle] = currentVehicle;
             }
         }
 

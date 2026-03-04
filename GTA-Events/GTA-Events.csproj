@@ -63,8 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bases\EventBase.cs" />
-    <Compile Include="Bases\NearbyPedEventBase.cs" />
+    <Compile Include="Core\EventBase.cs" />
+    <Compile Include="Core\NearbyPedContext.cs" />
+    <Compile Include="Core\NearbyPedEventBase.cs" />
     <Compile Include="Examples\PedEventExamples.cs" />
     <Compile Include="Examples\PlayerEventExamples.cs" />
     <Compile Include="Examples\WorldEventExamples.cs" />
