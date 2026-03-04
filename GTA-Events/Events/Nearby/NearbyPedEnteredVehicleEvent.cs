@@ -34,6 +34,7 @@ namespace GTA.Events
             if (cleanupTimer > 30.0f)
             {
                 cleanupTimer = 0.0f;
+                
                 Ped[] nearbyPeds = World.GetNearbyPeds(
                     Position ?? Game.Player.Character.Position, Radius
                 );

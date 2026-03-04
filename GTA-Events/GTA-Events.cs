@@ -5,6 +5,7 @@ namespace GTA.Events
 {
     public static class Events
     {
+        public static NearbyPedEnteredCoverEvent NearbyPedEnteredCover { get; } = new NearbyPedEnteredCoverEvent();
         public static NearbyPedEnteredVehicleEvent NearbyPedEnteredVehicle { get; } = new NearbyPedEnteredVehicleEvent();
         public static NearbyPedLeftVehicleEvent NearbyPedLeftVehicle { get; } = new NearbyPedLeftVehicleEvent();
         public static NearbyPedFleeingEvent NearbyPedFleeing { get; } = new NearbyPedFleeingEvent();
@@ -26,6 +27,7 @@ namespace GTA.Events
         public static NearbyExplosionEvent NearbyExplosion { get; } = new NearbyExplosionEvent();
 
         private static readonly List<EventBase> events = new List<EventBase> {
+            NearbyPedEnteredCover,
             NearbyPedEnteredVehicle,
             NearbyPedLeftVehicle,
             NearbyPedFleeing,

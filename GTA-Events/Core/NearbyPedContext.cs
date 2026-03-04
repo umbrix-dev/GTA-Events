@@ -40,6 +40,11 @@ namespace GTA.Events
 
                 foreach (Ped ped in World.GetNearbyPeds(position, loop.Key.radius))
                 {
+                    if (ped == Game.Player.Character)
+                    {
+                        continue;
+                    }
+
                     foreach (Action<Ped> handler in loop.Value)
                     {
                         handler(ped);

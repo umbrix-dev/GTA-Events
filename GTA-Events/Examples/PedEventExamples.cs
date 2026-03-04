@@ -9,12 +9,18 @@ public class PedEvents : Script
     {
         Tick += OnTick;
 
+        // Events.NearbyPedEnteredCover.Connect += OnNearbyPedEnteredCover;
         // Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
         // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
         // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
         // Events.NearbyPedStartedCombat.Connect += OnNearbyPedStartedCombat;
         // Events.NearbyPedStoppedCombat.Connect += OnNearbyPedStoppedCombat;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
+    }
+
+    private void OnNearbyPedEnteredCover(Ped ped)
+    {
+        Notification.PostTicker("A nearby ped has just entered cover.", true);
     }
 
     private void OnNearbyPedEnteredVehicle(Ped ped, Vehicle vehicle)

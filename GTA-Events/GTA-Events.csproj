@@ -66,6 +66,8 @@
     <Compile Include="Core\EventBase.cs" />
     <Compile Include="Core\NearbyPedContext.cs" />
     <Compile Include="Core\NearbyPedEventBase.cs" />
+    <Compile Include="Core\PedStateTracker.cs" />
+    <Compile Include="Events\Nearby\NearbyPedEnteredCoverEvent.cs" />
     <Compile Include="Events\Nearby\NearbyPedStoppedCombatEvent.cs" />
     <Compile Include="Events\Nearby\NearbyPedStartedCombatEvent.cs" />
     <Compile Include="Events\Player\PlayerAimingAtEvent.cs" />
