@@ -1,4 +1,5 @@
-# GTA-Events
+![](https://github.com/umbrix-dev/GTA-Events/blob/master/BANNER.png)
+
 ![Version](https://img.shields.io/github/v/tag/umbrix-dev/GTA-Events?label=version)
 ![License](https://img.shields.io/github/license/umbrix-dev/GTA-Events)
 ![SHVDN3](https://img.shields.io/badge/ScriptHookVDotNet-3.x-blue)
