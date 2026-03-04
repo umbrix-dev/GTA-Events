@@ -1,5 +1,4 @@
-﻿
-using GTA.Math;
+﻿using GTA.Math;
 using System;
 using System.Collections.Generic;
 
