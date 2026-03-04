@@ -12,6 +12,7 @@ public class PedEvents : Script
         // Events.NearbyPedEnteredVehicle.Connect += OnNearbyPedEnteredVehicle;
         // Events.NearbyPedLeftVehicle.Connect += OnNearbyPedLeftVehicle;
         // Events.NearbyPedFleeing.Connect += OnNearbyPedFleeing;
+        // Events.NearbyPedStartedCombat.Connect += OnNearbyPedStartedCombat;
         // Events.NearbyPedKilled.Connect += OnNearbyPedKilled;
     }
 
@@ -28,6 +29,11 @@ public class PedEvents : Script
     private void OnNearbyPedFleeing(Ped ped)
     {
         Notification.PostTicker("A nearby ped is fleeing.", true);
+    }
+
+    private void OnNearbyPedStartedCombat(Ped ped, Entity entity)
+    {
+        Notification.PostTicker("A nearby ped has started combat.", true);
     }
 
     private void OnNearbyPedKilled(Ped ped, Entity entity)
