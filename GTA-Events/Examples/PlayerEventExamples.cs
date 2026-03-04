@@ -12,6 +12,7 @@ public class PlayerEvents : Script
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.PlayerVehicleDamaged.Connect += OnPlayerVehicleDamaged;
+        // Events.PlayerTookDamage.Connect += OnPlayerTookDamage;
         // Events.PlayerDied.Connect += OnPlayerDied;
         // Events.PlayerRevived.Connect += OnPlayerRevived;
         // Events.PlayerWantedLevelChanged.Connect += OnPlayerWantedLevelChanged;
@@ -31,6 +32,11 @@ public class PlayerEvents : Script
     private void OnPlayerVehicleDamaged(Vehicle vehicle)
     {
         Notification.PostTicker("Player's vehicle just got damaged.", true);
+    }
+
+    private void OnPlayerTookDamage(int amount)
+    {
+        Notification.PostTicker($"Player took: {amount} damage.", true);
     }
 
     private void OnPlayerDied(Entity entity)

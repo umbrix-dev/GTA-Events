@@ -11,7 +11,7 @@ namespace GTA.Events
             Connect?.Invoke(vehicle);
         }
 
-        private float? lastVehicleHealth = null;
+        private int? lastVehicleHealth = null;
 
         internal override void OnTick()
         {
@@ -21,12 +21,12 @@ namespace GTA.Events
                 return;
             }
 
-            if (lastVehicleHealth != null && currentVehicle.HealthFloat != lastVehicleHealth)
+            if (lastVehicleHealth != null && currentVehicle.Health != lastVehicleHealth)
             {
                 Invoke(currentVehicle);    
             }
 
-            lastVehicleHealth = currentVehicle.HealthFloat;
+            lastVehicleHealth = currentVehicle.Health;
         }
 
         internal override bool HasSubscribers => Connect != null;

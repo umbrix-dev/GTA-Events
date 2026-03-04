@@ -16,6 +16,7 @@ namespace GTA.Events
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerVehicleDamagedEvent PlayerVehicleDamaged { get; } = new PlayerVehicleDamagedEvent();
+        public static PlayerTookDamageEvent PlayerTookDamage { get; } = new PlayerTookDamageEvent();
         public static PlayerDiedEvent PlayerDied { get; } = new PlayerDiedEvent();
         public static PlayerRevivedEvent PlayerRevived { get; } = new PlayerRevivedEvent();
         public static NearbyVehicleDestroyedEvent NearbyVehicleDestroyed { get; } = new NearbyVehicleDestroyedEvent();
@@ -33,6 +34,7 @@ namespace GTA.Events
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
             PlayerVehicleDamaged,
+            PlayerTookDamage,
             PlayerDied,
             PlayerRevived,
             NearbyVehicleDestroyed,
