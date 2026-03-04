@@ -1,5 +1,5 @@
 # GTA-Events
-A comprehensive event system for SHVDN3 - subscribe to GTA 5 events with a clean API.
+A comprehensive event system for SHVDN3 featuring 25+ events to hook into.
 
 &nbsp;
 > [!WARNING]
