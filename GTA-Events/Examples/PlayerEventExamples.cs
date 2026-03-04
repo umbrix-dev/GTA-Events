@@ -23,6 +23,8 @@ public class PlayerEvents : Script
         // Events.PlayerStoppedAiming.Connect += OnPlayerStoppedAiming;
         // Events.PlayerAimingAt.Connect += OnPlayerAimingAt;
         // Events.PlayerMeleeHit.Connect += OnPlayerMeleeHit;
+        // Events.PlayerEnteredWater.Connect += OnPlayerEnteredWater;
+        // Events.PlayerLeftWater.Connect += OnPlayerLeftWater;
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
@@ -92,6 +94,16 @@ public class PlayerEvents : Script
     private void OnPlayerMeleeHit(Ped ped)
     {
         Notification.PostTicker("Player hit an ped using melee.", true);
+    }
+
+    private void OnPlayerEnteredWater()
+    {
+        Notification.PostTicker("Player entered water.", true);
+    }
+
+    private void OnPlayerLeftWater()
+    {
+        Notification.PostTicker("Player left water.", true);
     }
 
     private void OnTick(object sender, EventArgs e)

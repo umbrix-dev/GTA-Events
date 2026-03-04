@@ -21,6 +21,8 @@ namespace GTA.Events
         public static PlayerStoppedAimingEvent PlayerStoppedAiming { get; } = new PlayerStoppedAimingEvent();
         public static PlayerAimingAtEvent PlayerAimingAt { get; } = new PlayerAimingAtEvent();
         public static PlayerMeleeHitEvent PlayerMeleeHit { get; } = new PlayerMeleeHitEvent();
+        public static PlayerEnteredWaterEvent PlayerEnteredWater { get; } = new PlayerEnteredWaterEvent();
+        public static PlayerLeftWaterEvent PlayerLeftWater { get; } = new PlayerLeftWaterEvent();
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerVehicleSpeedChangedEvent PlayerVehicleSpeedChanged { get; } = new PlayerVehicleSpeedChangedEvent();
@@ -49,6 +51,8 @@ namespace GTA.Events
             PlayerStoppedAiming,
             PlayerAimingAt,
             PlayerMeleeHit,
+            PlayerEnteredWater,
+            PlayerLeftWater,
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
             PlayerVehicleSpeedChanged,
