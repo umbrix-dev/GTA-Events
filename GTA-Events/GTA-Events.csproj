@@ -72,6 +72,7 @@
     <Compile Include="Events\Nearby\NearbyPedStoppedCombatEvent.cs" />
     <Compile Include="Events\Nearby\NearbyPedStartedCombatEvent.cs" />
     <Compile Include="Events\Player\PlayerAimingAtEvent.cs" />
+    <Compile Include="Events\Player\PlayerMeleeHitEvent.cs" />
     <Compile Include="Events\Player\PlayerStoppedAimingEvent.cs" />
     <Compile Include="Events\Player\PlayerStartedAimingEvent.cs" />
     <Compile Include="Events\Player\PlayerTookDamageEvent.cs" />

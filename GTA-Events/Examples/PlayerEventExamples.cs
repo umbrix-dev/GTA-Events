@@ -22,6 +22,7 @@ public class PlayerEvents : Script
         // Events.PlayerStartedAiming.Connect += OnPlayerStartedAiming;
         // Events.PlayerStoppedAiming.Connect += OnPlayerStoppedAiming;
         // Events.PlayerAimingAt.Connect += OnPlayerAimingAt;
+        // Events.PlayerMeleeHit.Connect += OnPlayerMeleeHit;
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
@@ -86,6 +87,11 @@ public class PlayerEvents : Script
     private void OnPlayerAimingAt(Entity entity)
     {
         Notification.PostTicker("Player is aiming at an entity.", true);
+    }
+
+    private void OnPlayerMeleeHit(Ped ped)
+    {
+        Notification.PostTicker("Player hit an ped using melee.", true);
     }
 
     private void OnTick(object sender, EventArgs e)

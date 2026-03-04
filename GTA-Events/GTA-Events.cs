@@ -13,12 +13,14 @@ namespace GTA.Events
         public static NearbyPedStartedCombatEvent NearbyPedStartedCombat { get; } = new NearbyPedStartedCombatEvent();
         public static NearbyPedStoppedCombatEvent NearbyPedStoppedCombat { get; } = new NearbyPedStoppedCombatEvent();
         public static NearbyPedKilledEvent NearbyPedKilled { get; } = new NearbyPedKilledEvent();
+
         public static PlayerWantedLevelChangedEvent PlayerWantedLevelChanged { get; } = new PlayerWantedLevelChangedEvent();
         public static PlayerWeaponChangedEvent PlayerWeaponChanged { get; } = new PlayerWeaponChangedEvent();
         public static PlayerWeaponFiredEvent PlayerWeaponFired { get; } = new PlayerWeaponFiredEvent();
         public static PlayerStartedAimingEvent PlayerStartedAiming { get; } = new PlayerStartedAimingEvent();
         public static PlayerStoppedAimingEvent PlayerStoppedAiming { get; } = new PlayerStoppedAimingEvent();
         public static PlayerAimingAtEvent PlayerAimingAt { get; } = new PlayerAimingAtEvent();
+        public static PlayerMeleeHitEvent PlayerMeleeHit { get; } = new PlayerMeleeHitEvent();
         public static PlayerEnteredVehicleEvent PlayerEnteredVehicle { get; } = new PlayerEnteredVehicleEvent();
         public static PlayerLeftVehicleEvent PlayerLeftVehicle { get; } = new PlayerLeftVehicleEvent();
         public static PlayerVehicleSpeedChangedEvent PlayerVehicleSpeedChanged { get; } = new PlayerVehicleSpeedChangedEvent();
@@ -26,6 +28,7 @@ namespace GTA.Events
         public static PlayerTookDamageEvent PlayerTookDamage { get; } = new PlayerTookDamageEvent();
         public static PlayerDiedEvent PlayerDied { get; } = new PlayerDiedEvent();
         public static PlayerRevivedEvent PlayerRevived { get; } = new PlayerRevivedEvent();
+
         public static NearbyVehicleDestroyedEvent NearbyVehicleDestroyed { get; } = new NearbyVehicleDestroyedEvent();
         public static NearbyExplosionEvent NearbyExplosion { get; } = new NearbyExplosionEvent();
 
@@ -45,6 +48,7 @@ namespace GTA.Events
             PlayerStartedAiming,
             PlayerStoppedAiming,
             PlayerAimingAt,
+            PlayerMeleeHit,
             PlayerEnteredVehicle,
             PlayerLeftVehicle,
             PlayerVehicleSpeedChanged,
