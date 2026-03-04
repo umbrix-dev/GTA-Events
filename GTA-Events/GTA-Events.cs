@@ -15,6 +15,7 @@ namespace GTA.Events
         public static NearbyPedKilledEvent NearbyPedKilled { get; } = new NearbyPedKilledEvent();
 
         public static PlayerRagdolledEvent PlayerRagdolled { get; } = new PlayerRagdolledEvent();
+        public static PlayerRecoveredFromRagdollEvent PlayerRecoveredFromRagdoll { get; } = new PlayerRecoveredFromRagdollEvent();
         public static PlayerWantedLevelChangedEvent PlayerWantedLevelChanged { get; } = new PlayerWantedLevelChangedEvent();
         public static PlayerWeaponChangedEvent PlayerWeaponChanged { get; } = new PlayerWeaponChangedEvent();
         public static PlayerWeaponFiredEvent PlayerWeaponFired { get; } = new PlayerWeaponFiredEvent();
@@ -46,6 +47,7 @@ namespace GTA.Events
             NearbyPedKilled,
 
             PlayerRagdolled,
+            PlayerRecoveredFromRagdoll,
             PlayerWantedLevelChanged,
             PlayerWeaponChanged,
             PlayerWeaponFired,

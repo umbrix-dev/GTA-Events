@@ -10,6 +10,7 @@ public class PlayerEvents : Script
         Tick += OnTick;
 
         // Events.PlayerRagdolled.Connect += OnPlayerRagdolled;
+        // Events.PlayerRecoveredFromRagdoll.Connect += OnPlayerRecoveredFromRagdoll;
         // Events.PlayerEnteredVehicle.Connect += OnPlayerEnteredVehicle;
         // Events.PlayerLeftVehicle.Connect += OnPlayerLeftVehicle;
         // Events.PlayerVehicleSpeedChanged.Connect += OnPlayerVehicleSpeedChanged;
@@ -31,6 +32,11 @@ public class PlayerEvents : Script
     private void OnPlayerRagdolled()
     {
         Notification.PostTicker("Player just ragdolled.", true);
+    }
+
+    private void OnPlayerRecoveredFromRagdoll()
+    {
+        Notification.PostTicker("Player recovered from ragdoll.", true);
     }
 
     private void OnPlayerEnteredVehicle(Vehicle vehicle)
