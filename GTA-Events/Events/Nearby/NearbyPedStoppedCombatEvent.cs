@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GTA.Events.Core;
+using System;
 using System.Collections.Generic;
 
 namespace GTA.Events
@@ -7,48 +8,30 @@ namespace GTA.Events
     {
         public event Action<Ped> Connect;
 
+        private readonly PedStateTracker<bool> tracker = new PedStateTracker<bool>();
+
         internal void Invoke(Ped ped)
         {
             Connect?.Invoke(ped);
         }
 
-        private readonly Dictionary<int, bool> pedInCombat = new Dictionary<int, bool>();
-        private float cleanupTimer = 0.0f;
-
         internal override void OnPed(Ped ped)
         {
+            tracker.TryGetLast(ped, out bool wasInCombat);
             bool isInCombat = ped.IsInCombat;
-            pedInCombat.TryGetValue(ped.Handle, out bool wasInCombat);
 
             if (wasInCombat && !isInCombat)
             {
                 Invoke(ped);
             }
 
-            pedInCombat[ped.Handle] = isInCombat;
+            tracker.Set(ped, isInCombat);
+
         }
 
         internal override void OnTick()
         {
-            cleanupTimer += Game.LastFrameTime;
-            if (cleanupTimer > 30.0f)
-            {
-                cleanupTimer = 0.0f;
-                Ped[] nearbyPeds = World.GetNearbyPeds(
-                    Position ?? Game.Player.Character.Position, Radius
-                );
-
-                HashSet<int> nearbyHandles = new HashSet<int>();
-                foreach (Ped ped in nearbyPeds)
-                    nearbyHandles.Add(ped.Handle);
-
-                List<int> toRemove = new List<int>();
-                foreach (int handle in pedInCombat.Keys)
-                    if (!nearbyHandles.Contains(handle)) toRemove.Add(handle);
-
-                foreach (int handle in toRemove)
-                    pedInCombat.Remove(handle);
-            }
+            tracker.Cleanup(Game.LastFrameTime, Position, Radius);
         }
 
         internal override bool HasSubscribers => Connect != null;
